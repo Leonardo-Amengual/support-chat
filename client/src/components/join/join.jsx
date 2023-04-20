@@ -1,14 +1,15 @@
 import React, {useRef} from "react";
+import io from 'socket.io-client'
 
 
 export default function Join({setChatVisibility}) {
 
     const usernameRef = useRef()
 
-    const handleSubmit = () => {
+    const handleSubmit = async () => {
         const username = usernameRef.current.value
         if(!username.trim()) return
-        console.log('submit')
+        const socket = await io.connect('http://localhost:3001')
         setChatVisibility(true)
     }
  
