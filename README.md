@@ -1,1 +1,1 @@
-Chat em tempo real usado typescript 
+Chat em tempo real usado  Javascript
